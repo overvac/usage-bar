@@ -57,6 +57,13 @@ Open `/config` and type `usage`. Every metric and the pace shading can be switch
 
 The whole plugin is one readable file, [`hooks/register.tsx`](hooks/register.tsx), and runs only through Claude Code's plugin API. It reads the usage figures Claude Code already tracks and your `theme` setting, and stores a single value: whether the bar is hidden. It **makes no network requests, reads or writes no files, runs no commands, uses no tokens** and sends nothing to the model. `claude plugin validate` lists every call it makes.
 
+It hooks four Claude Code events, and passes each one on unchanged:
+
+- **Session start:** registers `/usage-bar`, reads whether the bar is hidden and your theme, and takes the first usage figures.
+- **Usage measured:** records the new figures and redraws the bar.
+- **`/usage-bar` run:** hides or shows the bar. It answers only its own command, never another.
+- **Drawing above the prompt:** adds the bar as the last row, under anything else drawn there.
+
 ## FAQ
 
 **Why don't the 5-hour and weekly bars show?** Claude Code only reports usage limits for **Claude Pro and Max** subscribers signed in with claude.ai, and only after the session's first response. With an API key you get the cost and context bars.

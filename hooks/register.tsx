@@ -11,13 +11,32 @@
 // It makes no network requests, reads or writes no files, runs no commands,
 // and sends nothing to the model.
 
-import { atom, read, update } from 'claude-code'
 import type { Color, Elements, Register, SessionMeasureInput } from 'claude-code'
 
-import type { Limit, Usage } from '../types'
+type Limit = {
+  /** `five_hour`, `seven_day`, or a gateway's `spend_limit`. */
+  kind: string
+  percentUsed: number
+  /** ISO 8601 time the window resets. */
+  resetsAt?: string
+}
 
-const usage = atom({ plugin: 'usage-bar', key: 'usage' } as const, null)
-const isHidden = atom({ plugin: 'usage-bar', key: 'isHidden' } as const, false)
+/** The figures the bar shows, as Claude Code last reported them. */
+type Usage = {
+  costUsd?: number
+  contextPercent?: number
+  /** Input tokens the last response was answered over. */
+  contextTokens?: number
+  /** The model's context window, in tokens. */
+  contextWindow?: number
+  limits: Limit[]
+  /** `$.clock.now()` milliseconds when the session began. */
+  startedAt?: number
+  /** `$.clock.now()` milliseconds when any figure last changed. */
+  changedAt: number
+  /** Which figures changed then. */
+  changed: ('context' | 'rateLimits' | 'cost')[]
+}
 
 /** The $.store key that remembers /usage-bar's choice across sessions. */
 const HIDDEN_KEY = 'hidden'
@@ -72,15 +91,15 @@ const ALL: Shown = { cost: true, context: true, five_hour: true, seven_day: true
 
 /** Reads the manifest's `show_*` options; an option left unset shows its segment. */
 export function shownOf(options: Readonly<Record<string, unknown>>): Shown {
-  const on = (key: string) => options[key] !== false
+  const isSwitchedOn = (key: string) => options[key] !== false
 
   return {
-    cost: on('show_cost'),
-    context: on('show_context'),
-    five_hour: on('show_five_hour'),
-    seven_day: on('show_weekly'),
-    updated: on('show_last_change'),
-    pace: on('show_pace'),
+    cost: isSwitchedOn('show_cost'),
+    context: isSwitchedOn('show_context'),
+    five_hour: isSwitchedOn('show_five_hour'),
+    seven_day: isSwitchedOn('show_weekly'),
+    updated: isSwitchedOn('show_last_change'),
+    pace: isSwitchedOn('show_pace'),
   }
 }
 
@@ -336,6 +355,10 @@ function figuresOf(e: Pick<SessionMeasureInput, 'context' | 'rateLimits' | 'cost
 
 export const register: Register = (on, options) => {
   const shown = shownOf(options)
+  // The latest figures, and whether /usage-bar hid the bar. A change to
+  // either asks Claude Code to draw the bar again.
+  let usage: Usage | null = null
+  let isHidden = false
   let isDrawn = false
 
   on('session.start', async ($, e, next) => {
@@ -343,8 +366,7 @@ export const register: Register = (on, options) => {
       name: 'usage-bar',
       description: 'Hide or show the usage bar',
     })
-    const hidden = (await $.store.get(HIDDEN_KEY)) === true
-    await update($, isHidden, () => hidden)
+    isHidden = (await $.store.get(HIDDEN_KEY)) === true
     try {
       isLight = String((await $.settings.read()).theme ?? '').includes('light')
     } catch {
@@ -354,8 +376,7 @@ export const register: Register = (on, options) => {
     const current = await $.session.usage()
     const figures = figuresOf(current)
     if (figures.costUsd !== undefined || figures.contextPercent !== undefined || figures.limits.length > 0) {
-      const now = await $.clock.now()
-      await update($, usage, () => ({ ...figures, startedAt: current.startedAt, changedAt: now, changed: [] }))
+      usage = { ...figures, startedAt: current.startedAt, changedAt: await $.clock.now(), changed: [] }
     }
 
     // Keeps the countdowns, "ago" and the change highlight moving while
@@ -370,19 +391,18 @@ export const register: Register = (on, options) => {
   })
 
   on('session.measure', async ($, e, next) => {
-    const now = await $.clock.now()
-    const figures = figuresOf(e)
-    await update($, usage, previous => ({ ...figures, startedAt: previous?.startedAt, changedAt: now, changed: [...e.changed] }))
+    usage = { ...figuresOf(e), startedAt: usage?.startedAt, changedAt: await $.clock.now(), changed: [...e.changed] }
+    $.ui.invalidate('ui.render')
 
     return next(e)
   })
 
   on('command.run', { command: 'usage-bar' }, async $ => {
-    const hidden = !(await read($, isHidden))
-    await update($, isHidden, () => hidden)
-    await $.store.set(HIDDEN_KEY, hidden)
+    isHidden = !isHidden
+    await $.store.set(HIDDEN_KEY, isHidden)
+    $.ui.invalidate('ui.render')
 
-    return { text: hidden ? 'Usage bar hidden. Run /usage-bar to show it again.' : 'Usage bar shown.' }
+    return { text: isHidden ? 'Usage bar hidden. Run /usage-bar to show it again.' : 'Usage bar shown.' }
   })
 
   // The band's last row, under whatever else draws there.
@@ -391,8 +411,8 @@ export const register: Register = (on, options) => {
       return next(e)
     }
     isDrawn = false
-    const figures = await read($, usage)
-    if (figures === null || (await read($, isHidden))) {
+    const figures = usage
+    if (figures === null || isHidden) {
       return next(e)
     }
     const now = await $.clock.now()
