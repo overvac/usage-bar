@@ -159,11 +159,15 @@ function meter(icon: string, label: string | undefined, percent: number, pace?: 
 /** A length of time, as `3d 11h`, `2h 04m` or `45m`. */
 function span(ms: number): string {
   const seconds = Math.max(0, Math.floor(ms / 1000))
-  const d = Math.floor(seconds / 86400)
-  const h = Math.floor((seconds % 86400) / 3600)
-  const m = Math.floor((seconds % 3600) / 60)
+  const days = Math.floor(seconds / 86400)
+  const hours = Math.floor((seconds % 86400) / 3600)
+  const minutes = Math.floor((seconds % 3600) / 60)
 
-  return d ? `${d}d ${h}h` : h ? `${h}h ${String(m).padStart(2, '0')}m` : `${m}m`
+  if (days) {
+    return `${days}d ${hours}h`
+  }
+
+  return hours ? `${hours}h ${String(minutes).padStart(2, '0')}m` : `${minutes}m`
 }
 
 function ago(ms: number): string {
@@ -174,12 +178,12 @@ function ago(ms: number): string {
   if (seconds < 60) {
     return `${seconds}s ago`
   }
-  const m = Math.floor(seconds / 60)
-  if (m < 60) {
-    return m < 10 ? `${m}m ${String(seconds % 60).padStart(2, '0')}s ago` : `${m}m ago`
+  const minutes = Math.floor(seconds / 60)
+  if (minutes < 60) {
+    return minutes < 10 ? `${minutes}m ${String(seconds % 60).padStart(2, '0')}s ago` : `${minutes}m ago`
   }
 
-  return `${Math.floor(m / 60)}h ${String(m % 60).padStart(2, '0')}m ago`
+  return `${Math.floor(minutes / 60)}h ${String(minutes % 60).padStart(2, '0')}m ago`
 }
 
 const DAYS = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']

@@ -1,7 +1,7 @@
 {
   "name": "usage-bar",
   "displayName": "Usage Bar",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "Your 5-hour and weekly usage limits, context window and session cost as colour-graded bars above the prompt",
   "author": {
     "name": "overvac",
