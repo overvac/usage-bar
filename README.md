@@ -2,7 +2,7 @@
 
 **Usage Bar** is a [Claude Code](https://code.claude.com) plugin that shows your **5-hour and weekly usage limits**, **context window** and **session cost** as colour-graded bars above the prompt. You can see how close you are to a Claude Pro or Max limit, and when it resets, without running `/usage`.
 
-![Usage Bar: Claude Code plugin showing session cost, context window usage, and the 5-hour and weekly usage limits with reset countdowns](assets/preview.svg)
+![Usage Bar in Claude Code: a bar above the prompt with session cost, context window and the 5-hour and weekly usage limits; hovering the 5-hour bar shows its reset time and pace](assets/preview.gif)
 
 ```
 /plugin install usage-bar --marketplace overvac/usage-bar
@@ -64,8 +64,6 @@ The whole plugin is one readable file, [`hooks/register.tsx`](hooks/register.tsx
 **Does it replace my status line?** No. It draws its own row above the prompt, so a custom `statusLine` keeps working.
 
 **How accurate is the cost?** It's Claude Code's own estimate at list prices and may differ from your bill. On Pro or Max, treat it as a measure of how heavy the session is.
-
-**Prefer a classic status line?** [claude-usage-bar](https://github.com/overvac/claude-usage-bar) is the same bar as a `statusLine` script.
 
 ## Development
 
