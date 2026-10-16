@@ -16,7 +16,7 @@
 - **Hover a metric** for its details in the bar's own row: token counts, the exact reset time, how far ahead of or behind pace you are.
 - **Colour-graded bars** that run green → amber → red, and a brief highlight when a number changes.
 - **Fits any width:** bars share the free space; on narrow terminals only the numbers show.
-- **Doesn't touch your status line**, and works in the terminal and the Claude desktop app.
+- **Doesn't touch your status line**, and works in the terminal and the Claude desktop app's Code tab.
 
 ## Install
 

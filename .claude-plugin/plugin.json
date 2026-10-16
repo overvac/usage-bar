@@ -1,7 +1,7 @@
 {
   "name": "usage-bar",
   "displayName": "Usage Bar",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Your 5-hour and weekly usage limits, context window and session cost as colour-graded bars above the prompt",
   "author": {
     "name": "overvac",
@@ -9,6 +9,10 @@
   },
   "homepage": "https://github.com/overvac/usage-bar",
   "repository": "https://github.com/overvac/usage-bar",
+  "icon": "./assets/icon.png",
+  "documentationUrl": "https://github.com/overvac/usage-bar#readme",
+  "supportUrl": "https://github.com/overvac/usage-bar/issues",
+  "privacyPolicyUrl": "https://github.com/overvac/usage-bar#privacy-and-safety",
   "license": "MIT",
   "keywords": [
     "usage",
