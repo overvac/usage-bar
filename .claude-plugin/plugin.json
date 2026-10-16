@@ -1,12 +1,61 @@
 {
   "name": "usage-bar",
   "displayName": "Usage Bar",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Your 5-hour and weekly usage limits, context window and session cost as colour-graded bars above the prompt",
-  "author": { "name": "overvac", "url": "https://github.com/overvac" },
+  "author": {
+    "name": "overvac",
+    "url": "https://github.com/overvac"
+  },
   "homepage": "https://github.com/overvac/usage-bar",
   "repository": "https://github.com/overvac/usage-bar",
   "license": "MIT",
-  "keywords": ["usage", "usage-limits", "rate-limits", "context-window", "cost", "status-line", "mod"],
-  "types": "./types/index.d.ts"
+  "keywords": [
+    "usage",
+    "usage-limits",
+    "rate-limits",
+    "context-window",
+    "cost",
+    "status-line",
+    "mod"
+  ],
+  "types": "./types/index.d.ts",
+  "userConfig": {
+    "show_cost": {
+      "type": "boolean",
+      "title": "Show session cost",
+      "description": "The estimated cost of the session in US dollars",
+      "default": true
+    },
+    "show_context": {
+      "type": "boolean",
+      "title": "Show context window",
+      "description": "How full the context window is",
+      "default": true
+    },
+    "show_five_hour": {
+      "type": "boolean",
+      "title": "Show 5-hour limit",
+      "description": "Your 5-hour usage limit and its reset countdown (Pro and Max plans)",
+      "default": true
+    },
+    "show_weekly": {
+      "type": "boolean",
+      "title": "Show weekly limit",
+      "description": "Your weekly usage limit and its reset countdown (Pro and Max plans)",
+      "default": true
+    },
+    "show_last_change": {
+      "type": "boolean",
+      "title": "Show last change",
+      "description": "How long ago any of the figures last changed",
+      "default": true
+    },
+    "show_pace": {
+      "type": "boolean",
+      "title": "Show pace on limit bars",
+      "description": "Lightens each limit bar's empty track up to where even use of the window would be",
+      "default": true
+    }
+  }
 }
