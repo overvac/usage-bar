@@ -1,0 +1,181 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1010" height="206" viewBox="0 0 1010 206" role="img" aria-label="claude-usage-bar: Claude Code status line showing cost, context window and 5-hour and weekly usage limits">
+<rect width="1010" height="206" rx="10" fill="#1b1d23"/>
+<circle cx="22" cy="20" r="5.5" fill="#ff5f57"/>
+<circle cx="40" cy="20" r="5.5" fill="#febc2e"/>
+<circle cx="58" cy="20" r="5.5" fill="#28c840"/>
+<g font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="14" xml:space="preserve">
+<text x="22" y="52" fill="#5c6370" font-size="11.5">Plenty of room</text>
+<text x="22.0" y="74" fill="#8787af">$</text>
+<text x="30.4" y="74" fill="#87d7ff" font-weight="700">1.84</text>
+<text x="64.0" y="74" fill="#c8ccd4">  </text>
+<text x="80.8" y="74" fill="#4e4e4e">·</text>
+<text x="89.2" y="74" fill="#c8ccd4">  </text>
+<text x="106.0" y="74" fill="#8787af">◔ ctx</text>
+<text x="148.0" y="74" fill="#c8ccd4"> </text>
+<rect x="156.4" y="69" width="8.4" height="3" fill="#87d787"/>
+<rect x="164.8" y="69" width="8.4" height="3" fill="#87d787"/>
+<rect x="173.2" y="69" width="4.2" height="3" fill="#87d787"/>
+<rect x="181.6" y="69" width="67.2" height="3" fill="#3a3a3a"/>
+<text x="248.8" y="74" fill="#c8ccd4"> </text>
+<text x="257.2" y="74" fill="#afd787" font-weight="700">23%</text>
+<text x="282.4" y="74" fill="#c8ccd4">  </text>
+<text x="299.2" y="74" fill="#4e4e4e">·</text>
+<text x="307.6" y="74" fill="#c8ccd4">  </text>
+<text x="324.4" y="74" fill="#8787af">◷ 5h</text>
+<text x="358.0" y="74" fill="#c8ccd4"> </text>
+<rect x="366.4" y="69" width="8.4" height="3" fill="#87d787"/>
+<rect x="374.8" y="69" width="4.2" height="3" fill="#87d787"/>
+<rect x="383.2" y="69" width="75.6" height="3" fill="#3a3a3a"/>
+<text x="458.8" y="74" fill="#c8ccd4"> </text>
+<text x="467.2" y="74" fill="#87d787" font-weight="700">18%</text>
+<text x="492.4" y="74" fill="#c8ccd4"> </text>
+<text x="500.8" y="74" fill="#808080" opacity="0.6">↻</text>
+<text x="509.2" y="74" fill="#c8ccd4"> </text>
+<text x="517.6" y="74" fill="#808080">2h 04m</text>
+<text x="568.0" y="74" fill="#c8ccd4">  </text>
+<text x="584.8" y="74" fill="#4e4e4e">·</text>
+<text x="593.2" y="74" fill="#c8ccd4">  </text>
+<text x="610.0" y="74" fill="#8787af">◫ 7d</text>
+<text x="643.6" y="74" fill="#c8ccd4"> </text>
+<rect x="652.0" y="69" width="4.2" height="3" fill="#87d787"/>
+<rect x="660.4" y="69" width="84.0" height="3" fill="#3a3a3a"/>
+<text x="744.4" y="74" fill="#c8ccd4"> </text>
+<text x="752.8" y="74" fill="#87d787" font-weight="700"> 9%</text>
+<text x="778.0" y="74" fill="#c8ccd4"> </text>
+<text x="786.4" y="74" fill="#808080" opacity="0.6">↻</text>
+<text x="794.8" y="74" fill="#c8ccd4"> </text>
+<text x="803.2" y="74" fill="#808080">3d 11h</text>
+<text x="853.6" y="74" fill="#c8ccd4">  </text>
+<text x="870.4" y="74" fill="#4e4e4e">·</text>
+<text x="878.8" y="74" fill="#c8ccd4">  </text>
+<text x="895.6" y="74" fill="#87d787">●</text>
+<text x="904.0" y="74" fill="#c8ccd4"> </text>
+<text x="912.4" y="74" fill="#808080">just now</text>
+<text x="22" y="104" fill="#5c6370" font-size="11.5">Getting busy</text>
+<text x="22.0" y="126" fill="#8787af">$</text>
+<text x="30.4" y="126" fill="#87d7ff" font-weight="700">13.41</text>
+<text x="72.4" y="126" fill="#c8ccd4">  </text>
+<text x="89.2" y="126" fill="#4e4e4e">·</text>
+<text x="97.6" y="126" fill="#c8ccd4">  </text>
+<text x="114.4" y="126" fill="#8787af">◔ ctx</text>
+<text x="156.4" y="126" fill="#c8ccd4"> </text>
+<rect x="164.8" y="121" width="8.4" height="3" fill="#87d787"/>
+<rect x="173.2" y="121" width="8.4" height="3" fill="#87d787"/>
+<rect x="181.6" y="121" width="8.4" height="3" fill="#afd787"/>
+<rect x="190.0" y="121" width="8.4" height="3" fill="#d7d787"/>
+<rect x="198.4" y="121" width="8.4" height="3" fill="#ffd787"/>
+<rect x="206.8" y="121" width="4.2" height="3" fill="#ffd75f"/>
+<rect x="215.2" y="121" width="33.6" height="3" fill="#3a3a3a"/>
+<text x="248.8" y="126" fill="#c8ccd4"> </text>
+<text x="257.2" y="126" fill="#ffd75f" font-weight="700">58%</text>
+<text x="282.4" y="126" fill="#c8ccd4">  </text>
+<text x="299.2" y="126" fill="#4e4e4e">·</text>
+<text x="307.6" y="126" fill="#c8ccd4">  </text>
+<text x="324.4" y="126" fill="#8787af">◷ 5h</text>
+<text x="358.0" y="126" fill="#c8ccd4"> </text>
+<rect x="366.4" y="121" width="8.4" height="3" fill="#87d787"/>
+<rect x="374.8" y="121" width="8.4" height="3" fill="#87d787"/>
+<rect x="383.2" y="121" width="8.4" height="3" fill="#afd787"/>
+<rect x="391.6" y="121" width="8.4" height="3" fill="#d7d787"/>
+<rect x="400.0" y="121" width="8.4" height="3" fill="#ffd787"/>
+<rect x="408.4" y="121" width="8.4" height="3" fill="#ffd75f"/>
+<rect x="416.8" y="121" width="8.4" height="3" fill="#ffaf5f"/>
+<rect x="425.2" y="121" width="25.2" height="3" fill="#3a3a3a"/>
+<text x="450.4" y="126" fill="#c8ccd4"> </text>
+<text x="458.8" y="126" fill="#ff875f" font-weight="700">71%</text>
+<text x="484.0" y="126" fill="#c8ccd4"> </text>
+<text x="492.4" y="126" fill="#808080" opacity="0.6">↻</text>
+<text x="500.8" y="126" fill="#c8ccd4"> </text>
+<text x="509.2" y="126" fill="#808080">2h 04m</text>
+<text x="559.6" y="126" fill="#c8ccd4">  </text>
+<text x="576.4" y="126" fill="#4e4e4e">·</text>
+<text x="584.8" y="126" fill="#c8ccd4">  </text>
+<text x="601.6" y="126" fill="#8787af">◫ 7d</text>
+<text x="635.2" y="126" fill="#c8ccd4"> </text>
+<rect x="643.6" y="121" width="8.4" height="3" fill="#87d787"/>
+<rect x="652.0" y="121" width="8.4" height="3" fill="#87d787"/>
+<rect x="660.4" y="121" width="8.4" height="3" fill="#afd787"/>
+<rect x="668.8" y="121" width="8.4" height="3" fill="#d7d787"/>
+<rect x="677.2" y="121" width="4.2" height="3" fill="#ffd787"/>
+<rect x="685.6" y="121" width="42.0" height="3" fill="#3a3a3a"/>
+<text x="727.6" y="126" fill="#c8ccd4"> </text>
+<text x="736.0" y="126" fill="#ffd787" font-weight="700">46%</text>
+<text x="761.2" y="126" fill="#c8ccd4"> </text>
+<text x="769.6" y="126" fill="#808080" opacity="0.6">↻</text>
+<text x="778.0" y="126" fill="#c8ccd4"> </text>
+<text x="786.4" y="126" fill="#808080">3d 11h</text>
+<text x="836.8" y="126" fill="#c8ccd4">  </text>
+<text x="853.6" y="126" fill="#4e4e4e">·</text>
+<text x="862.0" y="126" fill="#c8ccd4">  </text>
+<text x="878.8" y="126" fill="#87d787">●</text>
+<text x="887.2" y="126" fill="#c8ccd4"> </text>
+<text x="895.6" y="126" fill="#808080">42s ago</text>
+<text x="22" y="156" fill="#5c6370" font-size="11.5">Close to the limit</text>
+<text x="22.0" y="178" fill="#8787af">$</text>
+<text x="30.4" y="178" fill="#87d7ff" font-weight="700">27.06</text>
+<text x="72.4" y="178" fill="#c8ccd4">  </text>
+<text x="89.2" y="178" fill="#4e4e4e">·</text>
+<text x="97.6" y="178" fill="#c8ccd4">  </text>
+<text x="114.4" y="178" fill="#8787af">◔ ctx</text>
+<text x="156.4" y="178" fill="#c8ccd4"> </text>
+<rect x="164.8" y="173" width="8.4" height="3" fill="#87d787"/>
+<rect x="173.2" y="173" width="8.4" height="3" fill="#87d787"/>
+<rect x="181.6" y="173" width="8.4" height="3" fill="#afd787"/>
+<rect x="190.0" y="173" width="8.4" height="3" fill="#d7d787"/>
+<rect x="198.4" y="173" width="8.4" height="3" fill="#ffd787"/>
+<rect x="206.8" y="173" width="8.4" height="3" fill="#ffd75f"/>
+<rect x="215.2" y="173" width="8.4" height="3" fill="#ffaf5f"/>
+<rect x="223.6" y="173" width="8.4" height="3" fill="#ff875f"/>
+<rect x="232.0" y="173" width="4.2" height="3" fill="#ff5f5f"/>
+<rect x="240.4" y="173" width="8.4" height="3" fill="#3a3a3a"/>
+<text x="248.8" y="178" fill="#c8ccd4"> </text>
+<text x="257.2" y="178" fill="#ff5f5f" font-weight="700">88%</text>
+<text x="282.4" y="178" fill="#c8ccd4">  </text>
+<text x="299.2" y="178" fill="#4e4e4e">·</text>
+<text x="307.6" y="178" fill="#c8ccd4">  </text>
+<text x="324.4" y="178" fill="#8787af">◷ 5h</text>
+<text x="358.0" y="178" fill="#c8ccd4"> </text>
+<rect x="366.4" y="173" width="8.4" height="3" fill="#87d787"/>
+<rect x="374.8" y="173" width="8.4" height="3" fill="#87d787"/>
+<rect x="383.2" y="173" width="8.4" height="3" fill="#afd787"/>
+<rect x="391.6" y="173" width="8.4" height="3" fill="#d7d787"/>
+<rect x="400.0" y="173" width="8.4" height="3" fill="#ffd787"/>
+<rect x="408.4" y="173" width="8.4" height="3" fill="#ffd75f"/>
+<rect x="416.8" y="173" width="8.4" height="3" fill="#ffaf5f"/>
+<rect x="425.2" y="173" width="8.4" height="3" fill="#ff875f"/>
+<rect x="433.6" y="173" width="8.4" height="3" fill="#ff5f5f"/>
+<rect x="442.0" y="173" width="8.4" height="3" fill="#3a3a3a"/>
+<text x="450.4" y="178" fill="#c8ccd4"> </text>
+<text x="458.8" y="178" fill="#ff5f5f" font-weight="700">94%</text>
+<text x="484.0" y="178" fill="#c8ccd4"> </text>
+<text x="492.4" y="178" fill="#808080" opacity="0.6">↻</text>
+<text x="500.8" y="178" fill="#c8ccd4"> </text>
+<text x="509.2" y="178" fill="#808080">2h 04m</text>
+<text x="559.6" y="178" fill="#c8ccd4">  </text>
+<text x="576.4" y="178" fill="#4e4e4e">·</text>
+<text x="584.8" y="178" fill="#c8ccd4">  </text>
+<text x="601.6" y="178" fill="#8787af">◫ 7d</text>
+<text x="635.2" y="178" fill="#c8ccd4"> </text>
+<rect x="643.6" y="173" width="8.4" height="3" fill="#87d787"/>
+<rect x="652.0" y="173" width="8.4" height="3" fill="#87d787"/>
+<rect x="660.4" y="173" width="8.4" height="3" fill="#afd787"/>
+<rect x="668.8" y="173" width="8.4" height="3" fill="#d7d787"/>
+<rect x="677.2" y="173" width="8.4" height="3" fill="#ffd787"/>
+<rect x="685.6" y="173" width="8.4" height="3" fill="#ffd75f"/>
+<rect x="694.0" y="173" width="8.4" height="3" fill="#ffaf5f"/>
+<rect x="702.4" y="173" width="8.4" height="3" fill="#ff875f"/>
+<rect x="710.8" y="173" width="16.8" height="3" fill="#3a3a3a"/>
+<text x="727.6" y="178" fill="#c8ccd4"> </text>
+<text x="736.0" y="178" fill="#ff5f5f" font-weight="700">81%</text>
+<text x="761.2" y="178" fill="#c8ccd4"> </text>
+<text x="769.6" y="178" fill="#808080" opacity="0.6">↻</text>
+<text x="778.0" y="178" fill="#c8ccd4"> </text>
+<text x="786.4" y="178" fill="#808080">3d 11h</text>
+<text x="836.8" y="178" fill="#c8ccd4">  </text>
+<text x="853.6" y="178" fill="#4e4e4e">·</text>
+<text x="862.0" y="178" fill="#c8ccd4">  </text>
+<text x="878.8" y="178" fill="#4e4e4e">●</text>
+<text x="887.2" y="178" fill="#c8ccd4"> </text>
+<text x="895.6" y="178" fill="#808080">10m ago</text>
+</g>
+</svg>

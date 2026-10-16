@@ -1,0 +1,12 @@
+{
+  "name": "usage-bar",
+  "owner": { "name": "overvac", "url": "https://github.com/overvac" },
+  "description": "Usage Bar: your Claude Code usage limits, context window and cost above the prompt",
+  "plugins": [
+    {
+      "name": "usage-bar",
+      "source": "./",
+      "description": "Your 5-hour and weekly usage limits, context window and session cost as colour-graded bars above the prompt"
+    }
+  ]
+}
